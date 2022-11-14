@@ -1,10 +1,7 @@
 name: Update_repo
 on:
   workflow_dispatch:
-       
-    schedule:
-    - cron: "0 15 * * 1-5"
-  
+     
 jobs:
   update-component:
     runs-on: ubuntu-latest
