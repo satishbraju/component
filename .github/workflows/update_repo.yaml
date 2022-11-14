@@ -1,4 +1,4 @@
-name: CWBD
+name: Update Repo
 on:
   workflow_dispatch:
        
