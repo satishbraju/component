@@ -1,7 +1,10 @@
-name: Update_repo
+name: CWBD
 on:
   workflow_dispatch:
-     
+       
+    schedule:
+    - cron: "0 15 * * 1-5"
+  
 jobs:
   update-component:
     runs-on: ubuntu-latest
@@ -12,3 +15,11 @@ jobs:
 
       - name: Check work folder
         run: pwd
+
+      - name: Update Repo
+        run: git submodule update --remote
+
+      - name: Commit chnages
+        run: git add . && git commit -m "update new version" && git push
+      
+      
