@@ -17,7 +17,11 @@ jobs:
         run: pwd
 
       - name: Update Repo
-        run: git submodule update --remote
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          run: git submodule update --remote
 
       - name: Commit chnages
-        run: git add . && git commit -m "update new version" && git push
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          run: git add . && git commit -m "update new version" && git push
