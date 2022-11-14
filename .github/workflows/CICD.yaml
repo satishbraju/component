@@ -25,3 +25,6 @@ jobs:
 
       - name: run LS
         run: ls -R
+
+      -name: run on submodule
+        run: python ./Unit/code/slp.py
