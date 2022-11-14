@@ -16,6 +16,9 @@ jobs:
       - name: Check work folder
         run: pwd
 
+      - name: Update identity
+        run: git config --global user.email "satishbraju@gmail.com" && git config --global user.name "satishbraju"
+
       - name: Update Repo
         run: git submodule update --remote
 
