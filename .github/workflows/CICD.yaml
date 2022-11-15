@@ -30,3 +30,6 @@ jobs:
 
       - name: run on submodule
         run: python ./Unit/code/slp.py
+
+      - name: create tag
+        run: python ./Unit/code/create_tag.py
